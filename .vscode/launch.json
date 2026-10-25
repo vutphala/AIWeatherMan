@@ -1,0 +1,16 @@
+{
+    // Debug AI WeatherMan:
+    //   1. In a terminal run ./run-debug.sh  (reads secrets from the git-ignored .env file)
+    //   2. Pick "Attach to WeatherMan (5005)" in Run and Debug, set breakpoints, then use the app.
+    // No secrets belong in this file. Put them in .env instead.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "jdk",
+            "request": "attach",
+            "name": "Attach to WeatherMan (5005)",
+            "hostName": "127.0.0.1",
+            "port": "5005"
+        }
+    ]
+}

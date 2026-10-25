@@ -1,0 +1,27 @@
+:root { font-family: system-ui, sans-serif; color: #1b2733; background: #f2f6fa; }
+body { margin: 0; }
+main { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+h1 { margin-top: 0; }
+#graphics { background: #fff; border-radius: 8px; padding: 16px; min-height: 120px; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.placeholder { color: #5b6b7a; }
+.days { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; padding: 0; }
+.day { display: flex; flex-direction: column; gap: 2px; border: 1px solid #d5dee7; border-radius: 6px; padding: 8px; }
+.day .date { font-weight: 600; }
+.day .icon { font-size: 1.8rem; }
+svg { width: 100%; height: auto; margin-top: 16px; }
+svg .grid { stroke: #e1e8ee; }
+svg .axis { font-size: 11px; fill: #5b6b7a; }
+svg .high { stroke: #d1432b; stroke-width: 2; }
+svg .low { stroke: #2b6fd1; stroke-width: 2; }
+svg .high-dot, svg .high-label { fill: #d1432b; }
+svg .low-dot, svg .low-label { fill: #2b6fd1; }
+svg .legend { font-size: 12px; }
+form { margin-top: 16px; }
+label { display: block; font-weight: 600; margin-bottom: 4px; }
+.row { display: flex; gap: 8px; }
+input { flex: 1; padding: 10px; font-size: 1rem; border: 1px solid #9fb0c0; border-radius: 6px; }
+button { padding: 10px 20px; font-size: 1rem; border: 0; border-radius: 6px; background: #2b6fd1; color: #fff; cursor: pointer; }
+button:disabled { background: #8aa7d1; cursor: not-allowed; }
+input:focus-visible, button:focus-visible { outline: 3px solid #f5a623; outline-offset: 2px; }
+#status.error { color: #b3261e; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

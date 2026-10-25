@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI WeatherMan</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <main>
+    <h1>AI WeatherMan</h1>
+
+    <section id="graphics" aria-label="Forecast" aria-live="polite">
+      <p class="placeholder">Ask about the weather to see a daily forecast.</p>
+    </section>
+
+    <form id="query-form" novalidate>
+      <label for="query">Ask about the weather</label>
+      <div class="row">
+        <input id="query" name="query" type="text" autocomplete="off"
+               placeholder="What's the weather like in Seattle this week?">
+        <button id="submit" type="submit">Submit</button>
+      </div>
+      <p id="loading" hidden>Loading…</p>
+      <p id="status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

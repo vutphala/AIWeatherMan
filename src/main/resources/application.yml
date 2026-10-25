@@ -1,0 +1,28 @@
+server:
+  address: 127.0.0.1   # override with SERVER_ADDRESS only behind an authenticating proxy
+
+spring:
+  application:
+    name: weatherman
+
+logging:
+  pattern:
+    level: "%5p [req:%X{requestId:-}]"   # adds the request id to every log line
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+
+# Required settings come from environment variables (never commit values):
+#   WEATHERMAN_BEDROCK_MODEL_ID, WEATHERMAN_BEDROCK_REGION,
+#   WEATHERMAN_PROVIDER_BASE_URL, WEATHERMAN_PROVIDER_API_KEY
+weatherman:
+  forecast:
+    days: 14   # single source of truth for forecast length (1-14); override with WEATHERMAN_FORECAST_DAYS
+  provider:
+    geocoding-url: https://geocoding-api.open-meteo.com/v1/search
